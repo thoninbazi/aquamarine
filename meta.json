@@ -24,8 +24,12 @@
   "com.thonin.doubletaplock": {
    "tagline": "Double-tap to lock — and to unlock.",
    "section": "Tweaks",
-   "description": "Double-tap empty space to lock or unlock your iPhone.\n\n- Home Screen and app switcher: double-tap empty space to lock — the screen turns off, exactly like the side button\n- Lock Screen: double-tap empty space to unlock — exactly like swiping up, so Face ID or your passcode is still required\n- Taps on icons, widgets, notifications, the flashlight/camera buttons and the passcode keypad keep working normally",
+   "description": "Double-tap empty space to lock or unlock your iPhone.\n\n- Home Screen: double-tap empty space to lock — the screen turns off, exactly like the side button\n- Lock Screen: double-tap empty space to unlock — exactly like swiping up, so Face ID or your passcode is still required\n- Taps on icons, widgets, notifications, the flashlight/camera buttons and the passcode keypad keep working normally",
    "changelog": [
+    [
+     "1.0.2",
+     "Double-tap to lock is now Home Screen only — the app switcher closes on the first tap of empty space, so a double-tap could never land there."
+    ],
     [
      "1.0.1",
      "Locking now turns the screen off, exactly like pressing the side button (it used to show the Lock Screen with the screen still on)."

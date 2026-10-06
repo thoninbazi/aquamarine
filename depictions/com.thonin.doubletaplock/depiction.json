@@ -10,7 +10,7 @@
    "views": [
     {
      "class": "DepictionMarkdownView",
-     "markdown": "**Double-tap to lock — and to unlock.**\n\nDouble-tap empty space to lock or unlock your iPhone.\n\n- Home Screen and app switcher: double-tap empty space to lock — the screen turns off, exactly like the side button\n- Lock Screen: double-tap empty space to unlock — exactly like swiping up, so Face ID or your passcode is still required\n- Taps on icons, widgets, notifications, the flashlight/camera buttons and the passcode keypad keep working normally"
+     "markdown": "**Double-tap to lock — and to unlock.**\n\nDouble-tap empty space to lock or unlock your iPhone.\n\n- Home Screen: double-tap empty space to lock — the screen turns off, exactly like the side button\n- Lock Screen: double-tap empty space to unlock — exactly like swiping up, so Face ID or your passcode is still required\n- Taps on icons, widgets, notifications, the flashlight/camera buttons and the passcode keypad keep working normally"
     },
     {
      "class": "DepictionSubheaderView",
@@ -24,12 +24,12 @@
     {
      "class": "DepictionTableTextView",
      "title": "Version",
-     "text": "1.0.1"
+     "text": "1.0.2"
     },
     {
      "class": "DepictionTableTextView",
      "title": "Size",
-     "text": "11 KB"
+     "text": "10 KB"
     },
     {
      "class": "DepictionTableTextView",
@@ -52,6 +52,10 @@
    "tabname": "Changelog",
    "class": "DepictionStackView",
    "views": [
+    {
+     "class": "DepictionMarkdownView",
+     "markdown": "**1.0.2**\n\nDouble-tap to lock is now Home Screen only — the app switcher closes on the first tap of empty space, so a double-tap could never land there."
+    },
     {
      "class": "DepictionMarkdownView",
      "markdown": "**1.0.1**\n\nLocking now turns the screen off, exactly like pressing the side button (it used to show the Lock Screen with the screen still on)."

@@ -27,4 +27,4 @@ CTL
   echo "built debs/${1}_${4}_iphoneos-arm64.deb"
 }
 mk com.thonin.chargewatts ChargeWatts ChargeWatts 1.0.0 "Live charging watts under your battery icon."
-mk com.thonin.doubletaplock DoubleTapLock DoubleTapLock 1.0.1 "Double-tap empty space to lock (screen off, like the side button), and on the Lock Screen to unlock (Face ID / passcode still required)."
+mk com.thonin.doubletaplock DoubleTapLock DoubleTapLock 1.0.2 "Double-tap empty space on the Home Screen to lock (screen off, like the side button), and on the Lock Screen to unlock (Face ID / passcode still required)."

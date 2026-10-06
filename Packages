@@ -70,6 +70,24 @@ MD5sum: 749e10a54f6559333d3563f4b8c874f8
 SHA1: 6d0d89d7c90bf27279e145b04b4092f9c34147cd
 SHA256: 4c17589cf27ef7c6a58e4f8186408fa57e0d0c03f130d49d946bb060fc9c44e1
 
+Package: com.thonin.doubletaplock
+Name: DoubleTapLock
+Version: 1.0.2
+Architecture: iphoneos-arm64
+Description: Double-tap empty space on the Home Screen to lock (screen off, like the side button), and on the Lock Screen to unlock (Face ID / passcode still required).
+Maintainer: Thonin
+Author: Thonin
+Section: Tweaks
+Depends: firmware (>= 15.0), mobilesubstrate
+Icon: https://thoninbazi.github.io/aquamarine/icons/com.thonin.doubletaplock.png
+Depiction: https://thoninbazi.github.io/aquamarine/depictions/com.thonin.doubletaplock/
+SileoDepiction: https://thoninbazi.github.io/aquamarine/depictions/com.thonin.doubletaplock/depiction.json
+Filename: https://github.com/thoninbazi/aquamarine/releases/download/debs/com.thonin.doubletaplock_1.0.2_iphoneos-arm64.deb
+Size: 10724
+MD5sum: 5e87d79ba16cb33a7d72ca9dc7eafdc6
+SHA1: fd8d48ed40162216fe2505d98c4ccf2c594f2a0a
+SHA256: 71d67fb17acb8e92230920e11bf7efb6361fd2d77a740a68a880440f62d14169
+
 Package: com.thonin.fulloff
 Name: FullOff
 Version: 1.0.0
