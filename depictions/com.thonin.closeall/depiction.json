@@ -1,0 +1,62 @@
+{
+ "minVersion": "0.1",
+ "class": "DepictionTabView",
+ "tintColor": "#2BB8B0",
+ "headerImage": "https://thoninbazi.github.io/aquamarine/icons/banner.png",
+ "tabs": [
+  {
+   "tabname": "Details",
+   "class": "DepictionStackView",
+   "views": [
+    {
+     "class": "DepictionMarkdownView",
+     "markdown": "**Close every app at once — keep the ones you lock.**\n\nClose all your apps from the app switcher in one go.\n\n- Tap Close All at the bottom of the app switcher, or swipe down anywhere in it\n- Hold a card for half a second to lock that app — locked apps show a padlock and are never closed by Close All (hold again to unlock)\n- The app playing music or audio is kept too\n- Apps really quit, exactly like swiping each one up\n- Works with any number of open apps; when nothing's left, you're back on the Home Screen\n- The button and padlocks only appear in the app switcher, never over your apps"
+    },
+    {
+     "class": "DepictionSubheaderView",
+     "title": "Information",
+     "useBoldText": true,
+     "useBottomMargin": true
+    },
+    {
+     "class": "DepictionSeparatorView"
+    },
+    {
+     "class": "DepictionTableTextView",
+     "title": "Version",
+     "text": "1.0.0"
+    },
+    {
+     "class": "DepictionTableTextView",
+     "title": "Size",
+     "text": "15 KB"
+    },
+    {
+     "class": "DepictionTableTextView",
+     "title": "iOS Versions",
+     "text": "18.0 – 18.4.1"
+    },
+    {
+     "class": "DepictionTableTextView",
+     "title": "Updated",
+     "text": "October 7, 2026"
+    },
+    {
+     "class": "DepictionTableTextView",
+     "title": "Developer",
+     "text": "Thonin"
+    }
+   ]
+  },
+  {
+   "tabname": "Changelog",
+   "class": "DepictionStackView",
+   "views": [
+    {
+     "class": "DepictionMarkdownView",
+     "markdown": "**1.0.0**\n\nFirst release."
+    }
+   ]
+  }
+ ]
+}

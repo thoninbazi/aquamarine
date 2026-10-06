@@ -16,6 +16,24 @@ MD5sum: 60d4978692f252b44ca2c6a6a2a8d961
 SHA1: 10590513fd663f2b146bbd0ec71f67f72d542ae9
 SHA256: 38e24c049abf57fe1a137015b0bfa708f3229b208e204ed7c72606b91ffb6580
 
+Package: com.thonin.closeall
+Name: CloseAll
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Description: Close all apps from the app switcher with one tap or a swipe down. Hold a card to lock an app so it's never closed.
+Maintainer: Thonin
+Author: Thonin
+Section: Tweaks
+Depends: firmware (>= 18.0), mobilesubstrate
+Icon: https://thoninbazi.github.io/aquamarine/icons/com.thonin.closeall.png
+Depiction: https://thoninbazi.github.io/aquamarine/depictions/com.thonin.closeall/
+SileoDepiction: https://thoninbazi.github.io/aquamarine/depictions/com.thonin.closeall/depiction.json
+Filename: debs/com.thonin.closeall_1.0.0_iphoneos-arm64.deb
+Size: 14872
+MD5sum: ca1865a0cf04e9f747e7047a0ed3ddd3
+SHA1: 1e8eb81b950a2122baa67ea814bac381b61b402e
+SHA256: d9b17b805457acd7e7c626b70334924dcb0f276ecde801480b52004fec41e94a
+
 Package: com.thonin.doubletaplock
 Name: DoubleTapLock
 Version: 1.0.0
