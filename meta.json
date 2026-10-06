@@ -3,7 +3,12 @@
   "name": "Aquamarine",
   "base_url": "https://thoninbazi.github.io/aquamarine/",
   "description": "Tweaks by Thonin for rootless jailbreaks (iOS 15+).",
-  "tint": "#2BB8B0"
+  "tint": "#2BB8B0",
+  "github": "thoninbazi/aquamarine",
+  "release_tag": "debs",
+  "release_hosted": [
+   "com.thonin.fulloff"
+  ]
  },
  "packages": {
   "com.thonin.chargewatts": {

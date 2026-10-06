@@ -11,6 +11,30 @@ meta = json.load(open('meta.json'))
 REPO, PKGS = meta['repo'], meta['packages']
 BASE = REPO['base_url'].rstrip('/') + '/'
 
+# Download counts: packages listed in repo.release_hosted ("*" = all) are served from the GitHub Release
+# repo.release_tag (GitHub counts every download; tools/stats.py reads them) via an absolute Filename URL —
+# Sileo (DownloadManager.swift) and Zebra 1.1.x (ZBDownloadManager.m) both download absolute URLs directly.
+# The same .deb stays in debs/ (the source of truth). Missing assets are uploaded; an asset that differs from the
+# local file stops the run (a published version must never change — bump the version instead).
+GH, TAG, HOSTED = REPO.get('github'), REPO.get('release_tag'), REPO.get('release_hosted') or []
+_assets = None
+def release_assets(refresh=False):
+    global _assets
+    if _assets is None or refresh:
+        out = subprocess.run(['gh', 'api', f'repos/{GH}/releases/tags/{TAG}'], capture_output=True, text=True, check=True).stdout
+        _assets = {a['name']: a for a in json.loads(out)['assets']}
+    return _assets
+def hosted_url(path, sha256):
+    name = os.path.basename(path)
+    if name not in release_assets():
+        subprocess.run(['gh', 'release', 'upload', TAG, path, '--repo', GH], check=True)
+        print(f'uploaded {name} to release {TAG}')
+        release_assets(refresh=True)
+    a = release_assets()[name]
+    if a['size'] != os.path.getsize(path) or (a.get('digest') and a['digest'] != 'sha256:' + sha256):
+        sys.exit(f'{name}: the release asset differs from debs/{name} — never change a published version; bump it')
+    return a['browser_download_url']
+
 def control(deb):
     out = subprocess.run(['dpkg-deb', '-f', deb], capture_output=True, text=True, check=True).stdout
     fields, key = {}, None
@@ -32,6 +56,8 @@ for f in sorted(os.listdir('debs')):
     pid = c['Package']
     c.update({'Filename': p, 'Size': str(len(data)), 'MD5sum': hashlib.md5(data).hexdigest(),
               'SHA1': hashlib.sha1(data).hexdigest(), 'SHA256': hashlib.sha256(data).hexdigest()})
+    if GH and TAG and (HOSTED == '*' or '*' in HOSTED or pid in HOSTED):
+        c['Filename'] = hosted_url(p, c['SHA256'])
     if os.path.exists(f'icons/{pid}.png'): c['Icon'] = BASE + f'icons/{pid}.png'
     c['Depiction'] = BASE + f'depictions/{pid}/'
     c['SileoDepiction'] = BASE + f'depictions/{pid}/depiction.json'
@@ -74,7 +100,8 @@ def human_size(n):
     n = int(n)
     return f'{n / 1048576:.2f} MB' if n >= 1048576 else f'{max(1, round(n / 1024))} KB'
 def release_date(c):
-    return time.strftime('%B %-d, %Y', time.localtime(os.path.getmtime(c['Filename'])))
+    local = c['Filename'] if not c['Filename'].startswith('http') else os.path.join('debs', os.path.basename(c['Filename']))
+    return time.strftime('%B %-d, %Y', time.localtime(os.path.getmtime(local)))
 def info_rows(c, m):   # the "Information" section (Version / Size / iOS Versions / Updated / Developer)
     return [('Version', c['Version']), ('Size', human_size(c['Size'])), ('iOS Versions', m.get('ios', '')),
             ('Updated', release_date(c)), ('Developer', c.get('Author', 'Thonin'))]

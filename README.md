@@ -12,3 +12,4 @@ Tweaks by Thonin for rootless jailbreaks (iOS 15+).
 | FullOff | Control Center's Wi-Fi and Bluetooth buttons turn the radio fully off |
 
 Maintainer notes: drop a `.deb` into `debs/`, describe it in `meta.json`, run `python3 tools/update.py`, commit and push.
+Packages listed in `meta.json` → `repo.release_hosted` are served from the `debs` GitHub Release (uploaded automatically) so downloads are counted: `python3 tools/stats.py`.

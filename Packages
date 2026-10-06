@@ -64,7 +64,7 @@ Depends: firmware (>= 18.0), mobilesubstrate
 Icon: https://thoninbazi.github.io/aquamarine/icons/com.thonin.fulloff.png
 Depiction: https://thoninbazi.github.io/aquamarine/depictions/com.thonin.fulloff/
 SileoDepiction: https://thoninbazi.github.io/aquamarine/depictions/com.thonin.fulloff/depiction.json
-Filename: debs/com.thonin.fulloff_1.0.0_iphoneos-arm64.deb
+Filename: https://github.com/thoninbazi/aquamarine/releases/download/debs/com.thonin.fulloff_1.0.0_iphoneos-arm64.deb
 Size: 5716
 MD5sum: bace601097d2d786a54adef3807d843c
 SHA1: 79b5b871e0b22cc110a415fdfcefa71abc2e5019
