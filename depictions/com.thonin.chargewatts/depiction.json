@@ -29,11 +29,6 @@
      "class": "DepictionTableTextView",
      "title": "Compatibility",
      "text": "iOS 15–18 · rootless"
-    },
-    {
-     "class": "DepictionTableTextView",
-     "title": "Tested on",
-     "text": "iPhone XS Max · iOS 18.4.1"
     }
    ]
   },

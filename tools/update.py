@@ -103,15 +103,13 @@ for pid, c in latest.items():
                 {'class': 'DepictionTableTextView', 'title': 'Version', 'text': c['Version']},
                 {'class': 'DepictionTableTextView', 'title': 'Developer', 'text': c.get('Author', 'Thonin')},
                 {'class': 'DepictionTableTextView', 'title': 'Compatibility', 'text': m.get('compat', 'Rootless')},
-                {'class': 'DepictionTableTextView', 'title': 'Tested on', 'text': m.get('tested', 'iPhone XS Max · iOS 18.4.1')},
             ]},
             {'tabname': 'Changelog', 'class': 'DepictionStackView', 'views': [
                 {'class': 'DepictionMarkdownView', 'markdown': f'**{v}**\n\n{t}'} for v, t in changelog]},
         ]}
     json.dump(sileo, open(f'{d}/depiction.json', 'w'), indent=1, ensure_ascii=False)
     rows = ''.join(f'<tr><td>{k}</td><td>{html.escape(v)}</td></tr>' for k, v in
-                   (('Version', c['Version']), ('Developer', c.get('Author', 'Thonin')), ('Compatibility', m.get('compat', '')),
-                    ('Tested on', m.get('tested', 'iPhone XS Max · iOS 18.4.1'))))
+                   (('Version', c['Version']), ('Developer', c.get('Author', 'Thonin')), ('Compatibility', m.get('compat', ''))))
     log = ''.join(f'<p><b>{html.escape(v)}</b> — {html.escape(t)}</p>' for v, t in changelog)
     open(f'{d}/index.html', 'w').write(f"""<!doctype html><html><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1"><title>{html.escape(c.get('Name', pid))}</title>
