@@ -1,0 +1,19 @@
+{
+ "class": "FeaturedBannersView",
+ "itemSize": "{263, 148}",
+ "itemCornerRadius": 10,
+ "banners": [
+  {
+   "url": "https://thoninbazi.github.io/aquamarine/icons/com.thonin.chargewatts.png",
+   "title": "ChargeWatts",
+   "package": "com.thonin.chargewatts",
+   "hideShadow": false
+  },
+  {
+   "url": "https://thoninbazi.github.io/aquamarine/icons/com.thonin.doubletaplock.png",
+   "title": "DoubleTapLock",
+   "package": "com.thonin.doubletaplock",
+   "hideShadow": false
+  }
+ ]
+}

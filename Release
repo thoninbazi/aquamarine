@@ -1,0 +1,27 @@
+Origin: Aquamarine
+Label: Aquamarine
+Suite: stable
+Version: 1.0
+Codename: aquamarine
+Architectures: iphoneos-arm64
+Components: main
+Description: Tweaks by Thonin for rootless jailbreaks (iOS 15+).
+Date: Tue, 06 Oct 2026 18:54:13 GMT
+MD5Sum:
+ 26492bbdae5c44d9525f0816f3d9a05b 1575 Packages
+ 6589f40bc54ce390694c8527d1c608da 635 Packages.gz
+ 6d3438c850a8cd305bcda74485b5447e 765 Packages.bz2
+ 1de27a01c1ad09d14ca8dc2b484db0f3 708 Packages.xz
+ 1a28b78e002e04925da816bc78ffd32c 636 Packages.zst
+SHA1:
+ d9c37a592370e53c0d00d57d81a74f31e511df0b 1575 Packages
+ 1eb9d2779eeb6b18d82206f6d1a3720840da3d2d 635 Packages.gz
+ 4efb11e91412a63aee73e9cb9ca0a7855334a999 765 Packages.bz2
+ 98147a7c7b3fee6d17ece5c33ab09c9cd5632147 708 Packages.xz
+ 95551d81cc787d19eba61106444a9f37502edb6f 636 Packages.zst
+SHA256:
+ daf4468c650f62471d7d6bbe8155d269d0f52a68abeefee3cdf4b7e5bc77f4b6 1575 Packages
+ d41fac87e85fb8080419332a859ceb4e2ac6243b0b1eeb030bdf211888bac086 635 Packages.gz
+ c1544d45763ba4d29a2ae8bff36c3d2c1f4d0b830cb8d98b61152b236a12852a 765 Packages.bz2
+ d5128296f471adbdbea684f2c533e3ab3800770112305c029645a8776a2d699d 708 Packages.xz
+ d465f0a433d1344b2ac70cafa5ebb35beba2dbd83919c55682024d525b1b6031 636 Packages.zst
