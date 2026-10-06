@@ -2,19 +2,15 @@
  "minVersion": "0.1",
  "class": "DepictionTabView",
  "tintColor": "#2BB8B0",
- "headerImage": "https://thoninbazi.github.io/aquamarine/icons/aquamarine.png",
+ "headerImage": "https://thoninbazi.github.io/aquamarine/icons/banner.png",
  "tabs": [
   {
    "tabname": "Details",
    "class": "DepictionStackView",
    "views": [
     {
-     "class": "DepictionHeaderView",
-     "title": "Live charging watts under your battery icon."
-    },
-    {
      "class": "DepictionMarkdownView",
-     "markdown": "Shows how many watts are really going into your iPhone while it charges — a small pill right under the battery icon, on the Home Screen, Lock Screen and in portrait apps.\n\n- Reads the power chip's own charge counters, so it updates twice a second instead of every 20 seconds\n- Accurate to within a few percent of the battery driver's own energy counter\n- Hides when unplugged, in landscape apps and while the screen is off (no battery cost)\n- Touches pass straight through it"
+     "markdown": "**Live charging watts under your battery icon.**\n\nShows how many watts are really going into your iPhone while it charges — a small pill right under the battery icon, on the Home Screen, Lock Screen and in portrait apps.\n\n- Reads the power chip's own charge counters, so it updates twice a second instead of every 20 seconds\n- Accurate to within a few percent of the battery driver's own energy counter\n- Hides when unplugged, in landscape apps and while the screen is off (no battery cost)\n- Touches pass straight through it"
     },
     {
      "class": "DepictionSeparatorView"
@@ -32,7 +28,12 @@
     {
      "class": "DepictionTableTextView",
      "title": "Compatibility",
-     "text": "iOS 15 – 18 · rootless (Dopamine). Tested on iPhone XS Max, iOS 18.4.1."
+     "text": "iOS 15–18 · rootless"
+    },
+    {
+     "class": "DepictionTableTextView",
+     "title": "Tested on",
+     "text": "iPhone XS Max · iOS 18.4.1"
     }
    ]
   },

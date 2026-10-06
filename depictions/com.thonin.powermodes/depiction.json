@@ -2,19 +2,15 @@
  "minVersion": "0.1",
  "class": "DepictionTabView",
  "tintColor": "#2BB8B0",
- "headerImage": "https://thoninbazi.github.io/aquamarine/icons/aquamarine.png",
+ "headerImage": "https://thoninbazi.github.io/aquamarine/icons/banner.png",
  "tabs": [
   {
    "tabname": "Details",
    "class": "DepictionStackView",
    "views": [
     {
-     "class": "DepictionHeaderView",
-     "title": "Battery Saver, Balanced and Performance — plus a 3-day trial of every Pro mode."
-    },
-    {
      "class": "DepictionMarkdownView",
-     "markdown": "Power modes that change real iOS settings — and always put yours back.\n\n- Battery Saver: Low Power Mode, dark appearance, Reduce Transparency & Motion, no auto-play, Background App Refresh off\n- Balanced: everything Power Modes changed goes back to your own settings (anything you changed by hand is left alone)\n- Performance: Low Power Mode off, background refresh paused, heat guard if the phone gets very hot\n- Live status: battery, Low Power Mode and the exact battery temperature\n- Uninstalling puts your settings back too\n\nFree 3-day trial of everything in Power Modes Pro: Auto (switches by game, charger and your battery levels), Fast Charge + switch on plug-in, Gaming with per-game Game Mode rules, Ultra Saver and your own Auto levels. After the trial the free modes keep working."
+     "markdown": "**Battery Saver, Balanced and Performance — plus a 3-day trial of every Pro mode.**\n\nPower modes that change real iOS settings — and always put yours back.\n\n- Battery Saver: Low Power Mode, dark appearance, Reduce Transparency & Motion, no auto-play, Background App Refresh off\n- Balanced: everything Power Modes changed goes back to your own settings (anything you changed by hand is left alone)\n- Performance: Low Power Mode off, background refresh paused, heat guard if the phone gets very hot\n- Live status: battery, Low Power Mode and the exact battery temperature\n- Uninstalling puts your settings back too\n\nFree 3-day trial of everything in Power Modes Pro: Auto (switches by game, charger and your battery levels), Fast Charge + switch on plug-in, Gaming with per-game Game Mode rules, Ultra Saver and your own Auto levels. After the trial the free modes keep working."
     },
     {
      "class": "DepictionSeparatorView"
@@ -32,7 +28,12 @@
     {
      "class": "DepictionTableTextView",
      "title": "Compatibility",
-     "text": "iOS 18 · rootless (Dopamine). Tested on iPhone XS Max, iOS 18.4.1."
+     "text": "iOS 18 · rootless"
+    },
+    {
+     "class": "DepictionTableTextView",
+     "title": "Tested on",
+     "text": "iPhone XS Max · iOS 18.4.1"
     }
    ]
   },

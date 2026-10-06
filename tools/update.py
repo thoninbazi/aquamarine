@@ -94,22 +94,24 @@ for pid, c in latest.items():
     changelog = m.get('changelog', [[c['Version'], '']])
     sileo = {
         'minVersion': '0.1', 'class': 'DepictionTabView', 'tintColor': REPO.get('tint', '#2BB8B0'),
-        'headerImage': BASE + 'icons/aquamarine.png',
+        'headerImage': BASE + 'icons/banner.png',
         'tabs': [
             {'tabname': 'Details', 'class': 'DepictionStackView', 'views': [
-                {'class': 'DepictionHeaderView', 'title': m.get('tagline', c.get('Description', ''))},
-                {'class': 'DepictionMarkdownView', 'markdown': m.get('description', c.get('Description', ''))},
+                # the tagline goes in the markdown as a bold first line: DepictionHeaderView truncates to one line
+                {'class': 'DepictionMarkdownView', 'markdown': f"**{m['tagline']}**\n\n" * bool(m.get('tagline')) + m.get('description', c.get('Description', ''))},
                 {'class': 'DepictionSeparatorView'},
                 {'class': 'DepictionTableTextView', 'title': 'Version', 'text': c['Version']},
                 {'class': 'DepictionTableTextView', 'title': 'Developer', 'text': c.get('Author', 'Thonin')},
-                {'class': 'DepictionTableTextView', 'title': 'Compatibility', 'text': m.get('compat', 'Rootless, iOS 15+')},
+                {'class': 'DepictionTableTextView', 'title': 'Compatibility', 'text': m.get('compat', 'Rootless')},
+                {'class': 'DepictionTableTextView', 'title': 'Tested on', 'text': m.get('tested', 'iPhone XS Max · iOS 18.4.1')},
             ]},
             {'tabname': 'Changelog', 'class': 'DepictionStackView', 'views': [
                 {'class': 'DepictionMarkdownView', 'markdown': f'**{v}**\n\n{t}'} for v, t in changelog]},
         ]}
     json.dump(sileo, open(f'{d}/depiction.json', 'w'), indent=1, ensure_ascii=False)
     rows = ''.join(f'<tr><td>{k}</td><td>{html.escape(v)}</td></tr>' for k, v in
-                   (('Version', c['Version']), ('Developer', c.get('Author', 'Thonin')), ('Compatibility', m.get('compat', ''))))
+                   (('Version', c['Version']), ('Developer', c.get('Author', 'Thonin')), ('Compatibility', m.get('compat', '')),
+                    ('Tested on', m.get('tested', 'iPhone XS Max · iOS 18.4.1'))))
     log = ''.join(f'<p><b>{html.escape(v)}</b> — {html.escape(t)}</p>' for v, t in changelog)
     open(f'{d}/index.html', 'w').write(f"""<!doctype html><html><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1"><title>{html.escape(c.get('Name', pid))}</title>

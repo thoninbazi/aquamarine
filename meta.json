@@ -16,7 +16,8 @@
           "First release."
         ]
       ],
-      "compat": "iOS 15 – 18 · rootless (Dopamine). Tested on iPhone XS Max, iOS 18.4.1."
+      "compat": "iOS 15–18 · rootless",
+      "tested": "iPhone XS Max · iOS 18.4.1"
     },
     "com.thonin.doubletaplock": {
       "tagline": "Double-tap to lock — and to unlock.",
@@ -28,7 +29,8 @@
           "First release."
         ]
       ],
-      "compat": "iOS 15 – 18 · rootless (Dopamine). Tested on iPhone XS Max, iOS 18.4.1."
+      "compat": "iOS 15–18 · rootless",
+      "tested": "iPhone XS Max · iOS 18.4.1"
     },
     "com.thonin.powermodes": {
       "tagline": "Battery Saver, Balanced and Performance — plus a 3-day trial of every Pro mode.",
@@ -40,7 +42,8 @@
           "First public release: Free edition with a 3-day Pro trial."
         ]
       ],
-      "compat": "iOS 18 · rootless (Dopamine). Tested on iPhone XS Max, iOS 18.4.1."
+      "compat": "iOS 18 · rootless",
+      "tested": "iPhone XS Max · iOS 18.4.1"
     }
   }
 }
