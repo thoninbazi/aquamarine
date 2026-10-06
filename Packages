@@ -33,23 +33,3 @@ Size: 8984
 MD5sum: affdf33b88b4ce4e67388bbafd5519aa
 SHA1: 0b8cc8ea71c3c170842fd3749e414d53125908be
 SHA256: f2e16248d1dd4dadb742fae2fe7dd2471167b02faff604ee06024ab816e2d5fa
-
-Package: com.thonin.powermodes
-Name: Power Modes
-Version: 1.0.0
-Architecture: iphoneos-arm64
-Description: Battery Saver, Balanced and Performance modes that change real iOS settings — and always put yours back. Includes a free 3-day trial of every Pro feature: Auto, Fast Charge, Gaming with Game Mode, Ultra Saver.
-Maintainer: Thonin
-Author: Thonin
-Section: Tweaks
-Depends: firmware (>= 18.0), mobilesubstrate
-Conflicts: com.thonin.powermodes.pro
-Replaces: com.thonin.powermodes.pro
-Icon: https://thoninbazi.github.io/aquamarine/icons/com.thonin.powermodes.png
-Depiction: https://thoninbazi.github.io/aquamarine/depictions/com.thonin.powermodes/
-SileoDepiction: https://thoninbazi.github.io/aquamarine/depictions/com.thonin.powermodes/depiction.json
-Filename: debs/com.thonin.powermodes_1.0.0_iphoneos-arm64.deb
-Size: 197276
-MD5sum: e5f9c2dd085820588d999caa453077e6
-SHA1: b808abc4e863f406b693766834ab0dfe667d3a5c
-SHA256: eab88503ce60a6897db6c99fe64c7d7ad6b1176f5d3dc5f615e9c7baa2d1dd02

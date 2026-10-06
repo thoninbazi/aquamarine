@@ -26,6 +26,8 @@ def ver_key(v):   # good-enough Debian-ish ordering for x.y.z versions
 entries, latest = [], {}
 for f in sorted(os.listdir('debs')):
     if not f.endswith('.deb'): continue
+    if PKGS.get(control(os.path.join('debs', f))['Package'], {}).get('hidden'):
+        sys.exit(f'{f}: package is marked hidden in meta.json — keep its .deb out of debs/ (it would be downloadable)')
     p = os.path.join('debs', f); data = open(p, 'rb').read(); c = control(p)
     pid = c['Package']
     c.update({'Filename': p, 'Size': str(len(data)), 'MD5sum': hashlib.md5(data).hexdigest(),
@@ -124,6 +126,11 @@ for pid, c in latest.items():
 <div class="card">{md_to_html(m.get('description', c.get('Description', '')))}</div>
 <div class="card"><h3>Information</h3><table>{rows}</table></div><div class="card"><h3>Changelog</h3>{log}</div>
 </div></body></html>""")
+
+# remove pages of packages that are no longer published (hidden / deleted)
+import shutil
+for d in os.listdir('depictions'):
+    if d not in latest and os.path.isdir(os.path.join('depictions', d)): shutil.rmtree(os.path.join('depictions', d))
 
 # ---------------------------------------------------------------- featured + landing page + .nojekyll
 json.dump({'class': 'FeaturedBannersView', 'itemSize': '{263, 148}', 'itemCornerRadius': 10,

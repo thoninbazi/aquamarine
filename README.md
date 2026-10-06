@@ -8,6 +8,5 @@ Tweaks by Thonin for rootless jailbreaks (iOS 15+).
 |---|---|
 | ChargeWatts | Live charging watts under your battery icon |
 | DoubleTapLock | Double-tap to lock — and to unlock (Face ID / passcode still required) |
-| Power Modes | Battery Saver, Balanced, Performance + a 3-day trial of every Pro mode |
 
 Maintainer notes: drop a `.deb` into `debs/`, describe it in `meta.json`, run `python3 tools/update.py`, commit and push.

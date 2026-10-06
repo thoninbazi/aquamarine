@@ -40,7 +40,8 @@
           "First release: Battery Saver, Balanced and Performance, with a free 3-day trial of every Pro feature."
         ]
       ],
-      "ios": "18.0 – 18.4.1"
+      "ios": "18.0 – 18.4.1",
+      "hidden": true
     }
   }
 }
