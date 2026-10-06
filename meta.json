@@ -38,8 +38,8 @@
       "description": "Power modes that change real iOS settings — and always put yours back.\n\n- Battery Saver: Low Power Mode, dark appearance, Reduce Transparency & Motion, no auto-play, Background App Refresh off\n- Balanced: everything Power Modes changed goes back to your own settings (anything you changed by hand is left alone)\n- Performance: Low Power Mode off, background refresh paused, heat guard if the phone gets very hot\n- Live status: battery, Low Power Mode and the exact battery temperature\n- Uninstalling puts your settings back too\n\nFree 3-day trial of everything in Power Modes Pro: Auto (switches by game, charger and your battery levels), Fast Charge + switch on plug-in, Gaming with per-game Game Mode rules, Ultra Saver and your own Auto levels. After the trial the free modes keep working.",
       "changelog": [
         [
-          "2.0.0",
-          "First public release: Free edition with a 3-day Pro trial."
+          "1.0.0",
+          "First release: Battery Saver, Balanced and Performance, with a free 3-day trial of every Pro feature."
         ]
       ],
       "compat": "iOS 18 · rootless",

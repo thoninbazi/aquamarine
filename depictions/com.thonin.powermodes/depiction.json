@@ -18,7 +18,7 @@
     {
      "class": "DepictionTableTextView",
      "title": "Version",
-     "text": "2.0.0"
+     "text": "1.0.0"
     },
     {
      "class": "DepictionTableTextView",
@@ -43,7 +43,7 @@
    "views": [
     {
      "class": "DepictionMarkdownView",
-     "markdown": "**2.0.0**\n\nFirst public release: Free edition with a 3-day Pro trial."
+     "markdown": "**1.0.0**\n\nFirst release: Battery Saver, Balanced and Performance, with a free 3-day trial of every Pro feature."
     }
    ]
   }
