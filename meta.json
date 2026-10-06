@@ -16,7 +16,7 @@
           "First release."
         ]
       ],
-      "compat": "iOS 15–18 · rootless"
+      "ios": "15.0 – 18.4.1"
     },
     "com.thonin.doubletaplock": {
       "tagline": "Double-tap to lock — and to unlock.",
@@ -28,7 +28,7 @@
           "First release."
         ]
       ],
-      "compat": "iOS 15–18 · rootless"
+      "ios": "15.0 – 18.4.1"
     },
     "com.thonin.powermodes": {
       "tagline": "Battery Saver, Balanced and Performance — plus a 3-day trial of every Pro mode.",
@@ -40,7 +40,7 @@
           "First release: Battery Saver, Balanced and Performance, with a free 3-day trial of every Pro feature."
         ]
       ],
-      "compat": "iOS 18 · rootless"
+      "ios": "18.0 – 18.4.1"
     }
   }
 }

@@ -68,6 +68,14 @@ for algo, name in (('md5', 'MD5Sum'), ('sha1', 'SHA1'), ('sha256', 'SHA256')):
 open('Release', 'w').write('\n'.join(rel) + '\n')
 
 # ---------------------------------------------------------------- depictions
+def human_size(n):
+    n = int(n)
+    return f'{n / 1048576:.2f} MB' if n >= 1048576 else f'{max(1, round(n / 1024))} KB'
+def release_date(c):
+    return time.strftime('%B %-d, %Y', time.localtime(os.path.getmtime(c['Filename'])))
+def info_rows(c, m):   # the "Information" section (Version / Size / iOS Versions / Updated / Developer)
+    return [('Version', c['Version']), ('Size', human_size(c['Size'])), ('iOS Versions', m.get('ios', '')),
+            ('Updated', release_date(c)), ('Developer', c.get('Author', 'Thonin'))]
 CSS = """body{margin:0;font:16px -apple-system,system-ui,sans-serif;background:#0b1622;color:#e8f4f3}
 .wrap{max-width:720px;margin:auto;padding:24px 18px}.hd{display:flex;gap:16px;align-items:center}
 .hd img{width:72px;height:72px;border-radius:16px}.tag{color:#9fc7c4}h1{margin:0;font-size:26px}
@@ -99,17 +107,14 @@ for pid, c in latest.items():
             {'tabname': 'Details', 'class': 'DepictionStackView', 'views': [
                 # the tagline goes in the markdown as a bold first line: DepictionHeaderView truncates to one line
                 {'class': 'DepictionMarkdownView', 'markdown': f"**{m['tagline']}**\n\n" * bool(m.get('tagline')) + m.get('description', c.get('Description', ''))},
+                {'class': 'DepictionSubheaderView', 'title': 'Information', 'useBoldText': True, 'useBottomMargin': True},
                 {'class': 'DepictionSeparatorView'},
-                {'class': 'DepictionTableTextView', 'title': 'Version', 'text': c['Version']},
-                {'class': 'DepictionTableTextView', 'title': 'Developer', 'text': c.get('Author', 'Thonin')},
-                {'class': 'DepictionTableTextView', 'title': 'Compatibility', 'text': m.get('compat', 'Rootless')},
-            ]},
+            ] + [{'class': 'DepictionTableTextView', 'title': k, 'text': v} for k, v in info_rows(c, m) if v]},
             {'tabname': 'Changelog', 'class': 'DepictionStackView', 'views': [
                 {'class': 'DepictionMarkdownView', 'markdown': f'**{v}**\n\n{t}'} for v, t in changelog]},
         ]}
     json.dump(sileo, open(f'{d}/depiction.json', 'w'), indent=1, ensure_ascii=False)
-    rows = ''.join(f'<tr><td>{k}</td><td>{html.escape(v)}</td></tr>' for k, v in
-                   (('Version', c['Version']), ('Developer', c.get('Author', 'Thonin')), ('Compatibility', m.get('compat', ''))))
+    rows = ''.join(f'<tr><td>{k}</td><td>{html.escape(v)}</td></tr>' for k, v in info_rows(c, m) if v)
     log = ''.join(f'<p><b>{html.escape(v)}</b> — {html.escape(t)}</p>' for v, t in changelog)
     open(f'{d}/index.html', 'w').write(f"""<!doctype html><html><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1"><title>{html.escape(c.get('Name', pid))}</title>
@@ -117,7 +122,7 @@ for pid, c in latest.items():
 <div class="hd"><img src="{BASE}icons/{pid}.png" alt=""><div><h1>{html.escape(c.get('Name', pid))}</h1>
 <div class="tag">{html.escape(m.get('tagline', ''))}</div></div></div>
 <div class="card">{md_to_html(m.get('description', c.get('Description', '')))}</div>
-<div class="card"><table>{rows}</table></div><div class="card"><h3>Changelog</h3>{log}</div>
+<div class="card"><h3>Information</h3><table>{rows}</table></div><div class="card"><h3>Changelog</h3>{log}</div>
 </div></body></html>""")
 
 # ---------------------------------------------------------------- featured + landing page + .nojekyll

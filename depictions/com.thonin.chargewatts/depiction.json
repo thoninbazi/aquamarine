@@ -13,6 +13,12 @@
      "markdown": "**Live charging watts under your battery icon.**\n\nShows how many watts are really going into your iPhone while it charges — a small pill right under the battery icon, on the Home Screen, Lock Screen and in portrait apps.\n\n- Reads the power chip's own charge counters, so it updates twice a second instead of every 20 seconds\n- Accurate to within a few percent of the battery driver's own energy counter\n- Hides when unplugged, in landscape apps and while the screen is off (no battery cost)\n- Touches pass straight through it"
     },
     {
+     "class": "DepictionSubheaderView",
+     "title": "Information",
+     "useBoldText": true,
+     "useBottomMargin": true
+    },
+    {
      "class": "DepictionSeparatorView"
     },
     {
@@ -22,13 +28,23 @@
     },
     {
      "class": "DepictionTableTextView",
-     "title": "Developer",
-     "text": "Thonin"
+     "title": "Size",
+     "text": "11 KB"
     },
     {
      "class": "DepictionTableTextView",
-     "title": "Compatibility",
-     "text": "iOS 15–18 · rootless"
+     "title": "iOS Versions",
+     "text": "15.0 – 18.4.1"
+    },
+    {
+     "class": "DepictionTableTextView",
+     "title": "Updated",
+     "text": "October 7, 2026"
+    },
+    {
+     "class": "DepictionTableTextView",
+     "title": "Developer",
+     "text": "Thonin"
     }
    ]
   },
