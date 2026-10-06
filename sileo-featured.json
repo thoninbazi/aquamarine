@@ -20,6 +20,12 @@
    "title": "DoubleTapLock",
    "package": "com.thonin.doubletaplock",
    "hideShadow": false
+  },
+  {
+   "url": "https://thoninbazi.github.io/aquamarine/icons/com.thonin.fulloff.png",
+   "title": "FullOff",
+   "package": "com.thonin.fulloff",
+   "hideShadow": false
   }
  ]
 }

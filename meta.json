@@ -54,6 +54,18 @@
     ]
    ],
    "ios": "18.0 – 18.4.1"
+  },
+  "com.thonin.fulloff": {
+   "tagline": "Control Center's Wi-Fi and Bluetooth really turn off.",
+   "section": "Tweaks",
+   "description": "Since iOS 11, the Wi-Fi and Bluetooth buttons in Control Center only disconnect you \"until tomorrow\" — the radios stay on. FullOff makes them switch the radio fully off, exactly like the switch in Settings.\n\n- Works everywhere Control Center shows them: the Connectivity group, the separate Wi-Fi and Bluetooth buttons, and the expanded network list\n- Turning them back on works as usual and reconnects to your network or devices\n- Fully off means AirDrop, Personal Hotspot and an Apple Watch's Bluetooth link go off too — same as Settings\n- No settings, nothing running in the background: it only acts when you tap",
+   "changelog": [
+    [
+     "1.0.0",
+     "First release."
+    ]
+   ],
+   "ios": "18.0 – 18.4.1"
   }
  }
 }

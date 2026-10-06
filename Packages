@@ -51,3 +51,21 @@ Size: 8984
 MD5sum: affdf33b88b4ce4e67388bbafd5519aa
 SHA1: 0b8cc8ea71c3c170842fd3749e414d53125908be
 SHA256: f2e16248d1dd4dadb742fae2fe7dd2471167b02faff604ee06024ab816e2d5fa
+
+Package: com.thonin.fulloff
+Name: FullOff
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Description: Control Center's Wi-Fi and Bluetooth buttons turn the radio fully off, like Settings — not just "disconnect until tomorrow".
+Maintainer: Thonin
+Author: Thonin
+Section: Tweaks
+Depends: firmware (>= 18.0), mobilesubstrate
+Icon: https://thoninbazi.github.io/aquamarine/icons/com.thonin.fulloff.png
+Depiction: https://thoninbazi.github.io/aquamarine/depictions/com.thonin.fulloff/
+SileoDepiction: https://thoninbazi.github.io/aquamarine/depictions/com.thonin.fulloff/depiction.json
+Filename: debs/com.thonin.fulloff_1.0.0_iphoneos-arm64.deb
+Size: 5716
+MD5sum: bace601097d2d786a54adef3807d843c
+SHA1: 79b5b871e0b22cc110a415fdfcefa71abc2e5019
+SHA256: add1e8a0218d85da7e650ce0443b752fdb9aaa6129a437c65e186c038fdb4568
