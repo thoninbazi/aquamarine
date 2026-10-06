@@ -10,7 +10,7 @@ Depends: firmware (>= 15.0), mobilesubstrate
 Icon: https://thoninbazi.github.io/aquamarine/icons/com.thonin.chargewatts.png
 Depiction: https://thoninbazi.github.io/aquamarine/depictions/com.thonin.chargewatts/
 SileoDepiction: https://thoninbazi.github.io/aquamarine/depictions/com.thonin.chargewatts/depiction.json
-Filename: debs/com.thonin.chargewatts_1.0.0_iphoneos-arm64.deb
+Filename: https://github.com/thoninbazi/aquamarine/releases/download/debs/com.thonin.chargewatts_1.0.0_iphoneos-arm64.deb
 Size: 11256
 MD5sum: 60d4978692f252b44ca2c6a6a2a8d961
 SHA1: 10590513fd663f2b146bbd0ec71f67f72d542ae9
@@ -28,7 +28,7 @@ Depends: firmware (>= 18.0), mobilesubstrate
 Icon: https://thoninbazi.github.io/aquamarine/icons/com.thonin.closeall.png
 Depiction: https://thoninbazi.github.io/aquamarine/depictions/com.thonin.closeall/
 SileoDepiction: https://thoninbazi.github.io/aquamarine/depictions/com.thonin.closeall/depiction.json
-Filename: debs/com.thonin.closeall_1.0.0_iphoneos-arm64.deb
+Filename: https://github.com/thoninbazi/aquamarine/releases/download/debs/com.thonin.closeall_1.0.0_iphoneos-arm64.deb
 Size: 14872
 MD5sum: ca1865a0cf04e9f747e7047a0ed3ddd3
 SHA1: 1e8eb81b950a2122baa67ea814bac381b61b402e
@@ -46,7 +46,7 @@ Depends: firmware (>= 15.0), mobilesubstrate
 Icon: https://thoninbazi.github.io/aquamarine/icons/com.thonin.doubletaplock.png
 Depiction: https://thoninbazi.github.io/aquamarine/depictions/com.thonin.doubletaplock/
 SileoDepiction: https://thoninbazi.github.io/aquamarine/depictions/com.thonin.doubletaplock/depiction.json
-Filename: debs/com.thonin.doubletaplock_1.0.0_iphoneos-arm64.deb
+Filename: https://github.com/thoninbazi/aquamarine/releases/download/debs/com.thonin.doubletaplock_1.0.0_iphoneos-arm64.deb
 Size: 8984
 MD5sum: affdf33b88b4ce4e67388bbafd5519aa
 SHA1: 0b8cc8ea71c3c170842fd3749e414d53125908be

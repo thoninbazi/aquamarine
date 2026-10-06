@@ -6,9 +6,7 @@
   "tint": "#2BB8B0",
   "github": "thoninbazi/aquamarine",
   "release_tag": "debs",
-  "release_hosted": [
-   "com.thonin.fulloff"
-  ]
+  "release_hosted": "*"
  },
  "packages": {
   "com.thonin.chargewatts": {
